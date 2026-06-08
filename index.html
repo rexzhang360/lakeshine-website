@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakeshine Cleaning Inc. | Professional Cleaning Services Markham GTA</title>
+<meta name="description" content="Professional residential and move-out cleaning services in Markham, Richmond Hill, Scarborough and GTA. Bilingual English/Chinese. Fully insured. Book online.">
+<meta name="keywords" content="cleaning service Markham, 清潔服務 萬錦, move-out cleaning, residential cleaning GTA, 搬家清潔, 住宅清潔">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --brand:     #0070C0;
+    --brand-dk:  #004F8B;
+    --brand-lt:  #D6E8F8;
+    --brand-xl:  #EBF4FC;
+    --green:     #1A7A3A;
+    --green-lt:  #E8F5EC;
+    --gold:      #B8860B;
+    --gold-lt:   #FFFDE7;
+    --dark:      #0D1B2A;
+    --slate:     #37474F;
+    --grey-lt:   #F5F7FA;
+    --white:     #FFFFFF;
+    --shadow:    0 4px 24px rgba(0,80,140,.10);
+    --shadow-lg: 0 12px 48px rgba(0,80,140,.16);
+    --radius:    12px;
+    --radius-lg: 20px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ───────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,112,192,.10);
+    padding: 0 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+    box-shadow: 0 2px 16px rgba(0,80,140,.07);
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 12px; text-decoration: none;
+  }
+  .nav-logo {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dk) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 700; color: white;
+    letter-spacing: -1px;
+  }
+  .nav-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px; font-weight: 600; color: var(--brand-dk);
+    line-height: 1.2;
+  }
+  .nav-name span { display: block; font-size: 10px; font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--slate); letter-spacing: .5px; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 32px; }
+  .nav-links a { text-decoration: none; color: var(--slate); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--brand); }
+  .nav-cta {
+    background: var(--brand); color: white !important;
+    padding: 9px 22px; border-radius: 8px; font-weight: 600 !important;
+    transition: background .2s, transform .1s !important;
+  }
+  .nav-cta:hover { background: var(--brand-dk) !important; transform: translateY(-1px); }
+  .nav-phone { font-size: 13px !important; color: var(--brand) !important; font-weight: 600 !important; }
+  @media(max-width:768px) {
+    .nav-links { display: none; }
+    .nav-mobile-cta { display: flex !important; }
+  }
+  .nav-mobile-cta { display: none; }
+
+  /* ── HERO ──────────────────────────────────────────────────── */
+  #hero {
+    min-height: 100vh;
+    background: linear-gradient(150deg, var(--brand-dk) 0%, var(--brand) 50%, #0099E6 100%);
+    display: flex; align-items: center;
+    padding: 100px 5vw 60px;
+    position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  #hero::after {
+    content: '';
+    position: absolute; bottom: -2px; left: 0; right: 0; height: 80px;
+    background: var(--white);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 680px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.25);
+    padding: 6px 16px; border-radius: 100px;
+    color: white; font-size: 13px; font-weight: 500;
+    margin-bottom: 28px; backdrop-filter: blur(8px);
+  }
+  .hero-badge::before { content: '✓'; font-weight: 700; }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5.5vw, 64px);
+    font-weight: 700; color: white; line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .hero-title-cn {
+    font-size: clamp(18px, 2.5vw, 28px);
+    color: rgba(255,255,255,.8); font-weight: 300;
+    margin-bottom: 24px; letter-spacing: 2px;
+  }
+  .hero-desc {
+    font-size: 17px; color: rgba(255,255,255,.85);
+    margin-bottom: 40px; max-width: 520px; line-height: 1.7;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .btn-primary {
+    background: white; color: var(--brand-dk);
+    padding: 14px 32px; border-radius: 10px;
+    font-size: 16px; font-weight: 700;
+    border: none; cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 16px rgba(0,0,0,.15);
+    text-decoration: none; display: inline-block;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+  .btn-secondary {
+    color: white; font-size: 15px; font-weight: 500;
+    text-decoration: none; display: flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,.4);
+    padding-bottom: 2px; transition: border-color .2s;
+  }
+  .btn-secondary:hover { border-color: white; }
+  .hero-trust {
+    display: flex; gap: 24px; margin-top: 48px; flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 8px;
+    color: rgba(255,255,255,.9); font-size: 13px; font-weight: 500;
+  }
+  .trust-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: rgba(255,255,255,.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+
+  /* ── SECTIONS ──────────────────────────────────────────────── */
+  section { padding: 80px 5vw; }
+  .section-label {
+    font-size: 12px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--brand);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 700; line-height: 1.2;
+    color: var(--dark); margin-bottom: 16px;
+  }
+  .section-title span { color: var(--brand); }
+  .section-desc {
+    font-size: 16px; color: var(--slate); max-width: 560px; line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  /* ── SERVICES ──────────────────────────────────────────────── */
+  #services { background: var(--grey-lt); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px; margin-top: 48px;
+  }
+  .service-card {
+    background: white; border-radius: var(--radius-lg);
+    padding: 32px; box-shadow: var(--shadow);
+    border: 1px solid rgba(0,112,192,.07);
+    transition: transform .25s, box-shadow .25s;
+    position: relative; overflow: hidden;
+  }
+  .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .service-card.featured {
+    background: linear-gradient(135deg, var(--brand-dk) 0%, var(--brand) 100%);
+    border-color: transparent;
+  }
+  .service-icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: var(--brand-xl); display: flex; align-items: center;
+    justify-content: center; font-size: 24px; margin-bottom: 20px;
+  }
+  .service-card.featured .service-icon { background: rgba(255,255,255,.2); }
+  .service-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 600; color: var(--dark); margin-bottom: 6px;
+  }
+  .service-card.featured .service-name { color: white; }
+  .service-name-cn { font-size: 13px; color: var(--slate); margin-bottom: 14px; }
+  .service-card.featured .service-name-cn { color: rgba(255,255,255,.7); }
+  .service-desc { font-size: 14px; color: var(--slate); line-height: 1.6; margin-bottom: 20px; }
+  .service-card.featured .service-desc { color: rgba(255,255,255,.85); }
+  .service-price {
+    font-size: 22px; font-weight: 700; color: var(--brand);
+    display: flex; align-items: baseline; gap: 4px;
+  }
+  .service-card.featured .service-price { color: white; }
+  .service-price span { font-size: 13px; font-weight: 400; color: var(--slate); }
+  .service-card.featured .service-price span { color: rgba(255,255,255,.7); }
+  .service-tag {
+    position: absolute; top: 20px; right: 20px;
+    background: var(--gold-lt); color: var(--gold);
+    font-size: 11px; font-weight: 600; padding: 4px 10px;
+    border-radius: 100px; text-transform: uppercase; letter-spacing: .5px;
+  }
+  .service-card.featured .service-tag { background: rgba(255,255,255,.2); color: white; }
+
+  /* ── PRICING TABLE ─────────────────────────────────────────── */
+  #pricing { background: white; }
+  .pricing-table {
+    width: 100%; border-collapse: collapse; margin-top: 32px;
+    border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .pricing-table th {
+    background: var(--brand-dk); color: white;
+    padding: 14px 20px; text-align: left;
+    font-size: 13px; font-weight: 600; letter-spacing: .5px;
+  }
+  .pricing-table th:last-child { text-align: right; }
+  .pricing-table td {
+    padding: 14px 20px; border-bottom: 1px solid var(--brand-lt);
+    font-size: 14px;
+  }
+  .pricing-table tr:last-child td { border-bottom: none; }
+  .pricing-table tr:nth-child(even) td { background: var(--grey-lt); }
+  .pricing-table td:last-child {
+    text-align: right; font-weight: 700; color: var(--green); font-size: 16px;
+  }
+  .pricing-table td.cn { color: var(--slate); font-size: 12px; }
+  .price-note {
+    margin-top: 16px; font-size: 13px; color: var(--slate);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .price-note::before { content: '*'; color: var(--brand); font-weight: 700; }
+  .discount-row {
+    display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap;
+  }
+  .discount-chip {
+    background: var(--green-lt); color: var(--green);
+    padding: 8px 18px; border-radius: 100px;
+    font-size: 13px; font-weight: 600;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .discount-chip::before { content: '✓'; }
+
+  /* ── WHY US ────────────────────────────────────────────────── */
+  #why { background: var(--grey-lt); }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px; margin-top: 48px;
+  }
+  .why-card {
+    background: white; border-radius: var(--radius-lg);
+    padding: 28px; box-shadow: var(--shadow);
+    border-top: 3px solid var(--brand);
+  }
+  .why-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; font-weight: 700; color: var(--brand-lt);
+    line-height: 1; margin-bottom: 12px;
+  }
+  .why-title { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+  .why-title-cn { font-size: 12px; color: var(--brand); margin-bottom: 10px; }
+  .why-desc { font-size: 14px; color: var(--slate); line-height: 1.6; }
+
+  /* ── BOOKING ───────────────────────────────────────────────── */
+  #booking {
+    background: linear-gradient(135deg, var(--brand-dk) 0%, var(--brand) 100%);
+    text-align: center; padding: 80px 5vw;
+  }
+  #booking .section-label { color: rgba(255,255,255,.7); }
+  #booking .section-title { color: white; margin-bottom: 12px; }
+  #booking .section-desc { color: rgba(255,255,255,.8); margin: 0 auto 40px; }
+  .booking-widget-wrap {
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px; max-width: 480px; margin: 0 auto;
+    backdrop-filter: blur(8px);
+  }
+  .booking-widget-wrap h3 {
+    font-family: 'Playfair Display', serif;
+    color: white; font-size: 22px; margin-bottom: 8px;
+  }
+  .booking-widget-wrap p {
+    color: rgba(255,255,255,.75); font-size: 14px; margin-bottom: 28px;
+  }
+  /* HouseCall Pro button override */
+  .hcp-button {
+    background: white !important; color: var(--brand-dk) !important;
+    padding: 16px 40px !important; border-radius: 10px !important;
+    font-size: 17px !important; font-weight: 700 !important;
+    border: none !important; cursor: pointer !important;
+    width: 100% !important; transition: transform .2s, box-shadow .2s !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,.15) !important;
+    font-family: 'DM Sans', sans-serif !important;
+  }
+  .hcp-button:hover { transform: translateY(-2px) !important; box-shadow: 0 8px 24px rgba(0,0,0,.25) !important; }
+  .booking-contact {
+    display: flex; justify-content: center; gap: 32px;
+    margin-top: 40px; flex-wrap: wrap;
+  }
+  .booking-contact-item {
+    display: flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,.9); font-size: 14px; text-decoration: none;
+  }
+  .booking-contact-item .icon {
+    width: 36px; height: 36px; border-radius: 9px;
+    background: rgba(255,255,255,.15);
+    display: flex; align-items: center; justify-content: center; font-size: 16px;
+  }
+
+  /* ── COVERAGE ──────────────────────────────────────────────── */
+  #coverage { background: white; }
+  .coverage-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px; margin-top: 32px;
+  }
+  .coverage-chip {
+    background: var(--brand-xl); border-radius: var(--radius);
+    padding: 18px; text-align: center;
+    border: 1px solid var(--brand-lt);
+  }
+  .coverage-chip strong { display: block; color: var(--brand-dk); font-size: 15px; margin-bottom: 4px; }
+  .coverage-chip span { font-size: 12px; color: var(--slate); }
+
+  /* ── FOOTER ────────────────────────────────────────────────── */
+  footer {
+    background: var(--dark); color: rgba(255,255,255,.7);
+    padding: 48px 5vw 32px;
+  }
+  .footer-top {
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 40px; margin-bottom: 40px;
+  }
+  .footer-brand .nav-name { color: white; font-size: 20px; }
+  .footer-brand .nav-name span { color: rgba(255,255,255,.5); }
+  .footer-tagline { font-size: 13px; margin-top: 10px; max-width: 220px; line-height: 1.6; }
+  .footer-col h4 { color: white; font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+  .footer-col a, .footer-col p {
+    display: block; color: rgba(255,255,255,.6);
+    font-size: 13px; text-decoration: none; line-height: 1;
+    margin-bottom: 10px; transition: color .2s;
+  }
+  .footer-col a:hover { color: white; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 24px; display: flex;
+    justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    font-size: 12px; color: rgba(255,255,255,.4);
+  }
+  .footer-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+  .badge {
+    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+    padding: 5px 12px; border-radius: 100px; font-size: 11px; color: rgba(255,255,255,.6);
+    display: flex; align-items: center; gap: 5px;
+  }
+
+  /* ── RESPONSIVE ────────────────────────────────────────────── */
+  @media(max-width:640px) {
+    section { padding: 60px 5vw; }
+    .hero-trust { gap: 16px; }
+    .pricing-table th:nth-child(2), .pricing-table td:nth-child(2) { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="nav-logo">L</div>
+    <div class="nav-name">
+      Lakeshine Cleaning
+      <span>湖光清潔有限公司</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#why">Why Us</a>
+    <a href="#coverage">Coverage</a>
+    <a href="tel:3653665151" class="nav-phone">📞 365-366-5151</a>
+    <a href="#booking" class="nav-cta">Book Now</a>
+  </div>
+  <a href="#booking" class="nav-mobile-cta nav-cta" style="text-decoration:none;font-size:14px;font-weight:600;color:white;background:var(--brand);padding:9px 18px;border-radius:8px;">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Markham · Richmond Hill · Scarborough · GTA</div>
+    <h1 class="hero-title">Your Home,<br>Spotlessly Clean.</h1>
+    <p class="hero-title-cn">專業清潔 · 值得信賴</p>
+    <p class="hero-desc">Professional residential and move-out cleaning services. Fully insured, background-checked, and bilingual. Serving the Chinese community and all GTA families.<br><span style="font-size:14px;opacity:.8">專業住宅及搬家清潔服務，持有保險，中英雙語，服務萬錦及大多倫多地區。</span></p>
+    <div class="hero-actions">
+      <button data-token="a947c30e065042f3b88d5c6791992ed1" data-orgname="360fx-llp" class="hcp-button btn-primary" onClick="HCPWidget.openModal()">📅 Book Online Now</button>
+      <a href="tel:3653665151" class="btn-secondary">📞 365-366-5151 →</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><div class="trust-icon">🛡</div>$2M Insured 持有保險</div>
+      <div class="trust-item"><div class="trust-icon">✅</div>WSIB Covered</div>
+      <div class="trust-item"><div class="trust-icon">🌟</div>100% Satisfaction 滿意保證</div>
+      <div class="trust-item"><div class="trust-icon">🗣</div>中英雙語 Bilingual</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">Our Services · 服務項目</div>
+  <h2 class="section-title">Everything Your Home <span>Needs</span></h2>
+  <p class="section-desc">From regular upkeep to deep move-out cleans — we handle it all, so you don't have to.<br>從日常定期清潔到搬家深度清潔，我們一手包辦。</p>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">🏠</div>
+      <div class="service-name">Regular Cleaning</div>
+      <div class="service-name-cn">定期住宅清潔</div>
+      <p class="service-desc">Systematic top-to-bottom cleaning for condos and houses. Kitchen, bathrooms, floors and all living areas. 系統化全屋清潔，廚房、浴室、地板及所有生活區域。</p>
+      <div class="service-price">From $120 <span>+HST · Studio起</span></div>
+    </div>
+
+    <div class="service-card featured">
+      <div class="service-tag">Most Popular · 最受歡迎</div>
+      <div class="service-icon">📦</div>
+      <div class="service-name">Move-Out Deep Clean</div>
+      <div class="service-name-cn">搬家/空屋深度清潔</div>
+      <p class="service-desc">Thorough vacant unit cleaning meeting landlord inspection standards. Inside appliances, cabinets, all fixtures. 全面深度清潔達到業主驗收標準，含電器內部及所有燈具。</p>
+      <div class="service-price">From $280 <span>+HST · Condo起</span></div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🏡</div>
+      <div class="service-name">House & Townhouse</div>
+      <div class="service-name-cn">獨立屋/聯排屋清潔</div>
+      <p class="service-desc">Multi-level homes with stairs, basements and garages. All floor types including hardwood. 多層獨立屋，含樓梯、地下室，各類地板均可清潔。</p>
+      <div class="service-price">From $210 <span>+HST · 2BR起</span></div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">✨</div>
+      <div class="service-name">Add-On Services</div>
+      <div class="service-name-cn">附加服務項目</div>
+      <p class="service-desc">Inside oven $45 · Inside fridge $40 · Windows $10/pane · Balcony $35 · Range hood filter $30 and more. 烤箱$45·冰箱$40·窗戶$10/扇·陽台$35。</p>
+      <div class="service-price">From $25 <span>per add-on</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-label">Transparent Pricing · 透明報價</div>
+  <h2 class="section-title">Simple, <span>Honest</span> Rates</h2>
+  <p class="section-desc">No hidden fees. All prices are before HST (13%). Final quote based on actual home condition.<br>無隱藏費用。所有價格均為稅前，最終報價以實際屋況為準。</p>
+
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th>Service Type · 服務類型</th>
+        <th>Size · 大小</th>
+        <th>Est. Time · 預計時間</th>
+        <th>Starting Price · 起始報價</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Condo Regular · 公寓定期<br><small style="color:var(--slate)">Studio / Bachelor</small></td><td>Studio</td><td>45–60 min</td><td>$120</td></tr>
+      <tr><td>Condo Regular · 公寓定期</td><td>1 Bedroom</td><td>60–90 min</td><td>$150</td></tr>
+      <tr><td>Condo Regular · 公寓定期</td><td>2 Bedroom</td><td>90–150 min</td><td>$185</td></tr>
+      <tr><td>Condo Regular · 公寓定期</td><td>3 Bedroom</td><td>2.5–3.5 hrs</td><td>$230</td></tr>
+      <tr><td>House Regular · 獨立屋定期</td><td>3 Bedroom</td><td>2.5–3.5 hrs</td><td>$270</td></tr>
+      <tr><td>House Regular · 獨立屋定期</td><td>4 Bedroom</td><td>3–4.5 hrs</td><td>$320</td></tr>
+      <tr><td>Move-Out · 搬家清潔 (Condo)</td><td>1 Bedroom</td><td>3–4 hrs</td><td>$280</td></tr>
+      <tr><td>Move-Out · 搬家清潔 (Condo)</td><td>2 Bedroom</td><td>4–6 hrs</td><td>$350</td></tr>
+      <tr><td>Move-Out · 搬家清潔 (House)</td><td>3 Bedroom</td><td>7–9 hrs</td><td>$550</td></tr>
+    </tbody>
+  </table>
+
+  <p class="price-note">All prices before HST (13%). First-time deep clean may be quoted higher. 所有價格不含HST，首次深度清潔報價可能較高。</p>
+
+  <div class="discount-row">
+    <div class="discount-chip">Weekly 每週 — 15% OFF</div>
+    <div class="discount-chip">Bi-Weekly 每兩週 — 10% OFF</div>
+    <div class="discount-chip">Monthly 每月 — 5% OFF</div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-label">Why Lakeshine · 為什麼選擇我們</div>
+  <h2 class="section-title">The <span>Lakeshine</span> Difference</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-num">01</div>
+      <div class="why-title">Fully Insured & WSIB</div>
+      <div class="why-title-cn">持有全額保險及WSIB保障</div>
+      <p class="why-desc">$2,000,000 Commercial General Liability insurance. All workers WSIB covered. Zero liability for you.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">02</div>
+      <div class="why-title">Same Cleaner Every Time</div>
+      <div class="why-title-cn">每次同一位清潔員</div>
+      <p class="why-desc">No strangers every visit. Your regular cleaner knows your home, your preferences, and your standards.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">03</div>
+      <div class="why-title">Bilingual Service</div>
+      <div class="why-title-cn">中英雙語服務</div>
+      <p class="why-desc">Fully fluent in English and Mandarin. Communicate your needs clearly — no misunderstandings. 普通話/英語無障礙溝通。</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">04</div>
+      <div class="why-title">100% Satisfaction Guarantee</div>
+      <div class="why-title-cn">100%滿意保證</div>
+      <p class="why-desc">Not satisfied? We return within 24 hours to re-clean at no charge. Your happiness is our priority.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">05</div>
+      <div class="why-title">WeChat & Phone Support</div>
+      <div class="why-title-cn">微信及電話即時回覆</div>
+      <p class="why-desc">Book by phone, WeChat or online. Direct communication — no call centres, no runaround.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-num">06</div>
+      <div class="why-title">Toronto Home Specialists</div>
+      <div class="why-title-cn">多倫多住宅清潔專家</div>
+      <p class="why-desc">We understand hardwood floors, baseboard heaters, and move-out standards specific to Toronto and GTA homes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="section-label">Book Now · 立即預約</div>
+  <h2 class="section-title" style="color:white;">Ready for a <span style="color:var(--gold-lt)">Cleaner Home?</span></h2>
+  <p class="section-desc">Book online in seconds, or contact us directly. We respond within 2 hours.<br>線上幾秒完成預約，或直接聯繫我們，2小時內回覆。</p>
+
+  <div class="booking-widget-wrap">
+    <h3>Book Your Cleaning · 立即預約</h3>
+    <p>Choose your service, date and time. Instant confirmation.<br>選擇服務、日期和時間，即時確認。</p>
+    <!--Start of Housecallpro Online booking button-->
+    <button data-token="a947c30e065042f3b88d5c6791992ed1" data-orgname="360fx-llp" class="hcp-button" onClick="HCPWidget.openModal()">
+      📅 Book Online · 線上預約
+    </button>
+    <script async src="https://online-booking.housecallpro.com/script.js?token=a947c30e065042f3b88d5c6791992ed1&orgName=360fx-llp"></script>
+    <!--End of Housecallpro Online booking button-->
+  </div>
+
+  <div class="booking-contact">
+    <a href="tel:3653665151" class="booking-contact-item">
+      <div class="icon">📞</div>
+      <div><strong style="display:block;color:white;font-size:15px;">365-366-5151</strong><span style="font-size:12px;">Call or Text · 電話/短信</span></div>
+    </a>
+    <a href="mailto:info@lakeshinecleaning.ca" class="booking-contact-item">
+      <div class="icon">✉️</div>
+      <div><strong style="display:block;color:white;font-size:15px;">info@lakeshinecleaning.ca</strong><span style="font-size:12px;">Email · 電郵</span></div>
+    </a>
+    <div class="booking-contact-item">
+      <div class="icon">💬</div>
+      <div><strong style="display:block;color:white;font-size:15px;">WeChat · 微信</strong><span style="font-size:12px;">Search: lakeshineclean</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section id="coverage">
+  <div class="section-label">Service Area · 服務範圍</div>
+  <h2 class="section-title">We Come <span>To You</span></h2>
+  <p class="section-desc">Serving Markham and surrounding GTA communities.<br>服務萬錦市及大多倫多周邊社區。</p>
+  <div class="coverage-grid">
+    <div class="coverage-chip"><strong>Markham</strong><span>萬錦市</span></div>
+    <div class="coverage-chip"><strong>Richmond Hill</strong><span>列治文山</span></div>
+    <div class="coverage-chip"><strong>Scarborough</strong><span>士嘉堡</span></div>
+    <div class="coverage-chip"><strong>North York</strong><span>北約克</span></div>
+    <div class="coverage-chip"><strong>Stouffville</strong><span>斯托夫維爾</span></div>
+    <div class="coverage-chip"><strong>Ajax / Pickering</strong><span>阿賈克斯/皮克林</span></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-brand" style="text-decoration:none;">
+        <div class="nav-logo">L</div>
+        <div class="nav-name">Lakeshine Cleaning<span>湖光清潔有限公司</span></div>
+      </div>
+      <p class="footer-tagline">Professional cleaning services for GTA families. Bilingual. Insured. Reliable.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services · 服務</h4>
+      <a href="#services">Regular Cleaning · 定期清潔</a>
+      <a href="#services">Move-Out Cleaning · 搬家清潔</a>
+      <a href="#services">House & Townhouse · 獨立屋</a>
+      <a href="#services">Add-On Services · 附加服務</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact · 聯繫</h4>
+      <a href="tel:3653665151">📞 365-366-5151</a>
+      <a href="mailto:info@lakeshinecleaning.ca">✉ info@lakeshinecleaning.ca</a>
+      <p>💬 WeChat: lakeshineclean</p>
+      <p>📍 Markham, Ontario</p>
+    </div>
+    <div class="footer-col">
+      <h4>Hours · 服務時間</h4>
+      <p>Monday – Friday · 週一至週五</p>
+      <p>9:00 AM – 7:00 PM</p>
+      <p>Saturday · 週六</p>
+      <p>9:00 AM – 5:00 PM</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Lakeshine Cleaning Inc. (1001637462 Ontario Inc.) All rights reserved.</span>
+    <div class="footer-badges">
+      <span class="badge">🛡 $2M Insured</span>
+      <span class="badge">✅ WSIB Covered</span>
+      <span class="badge">🏛 Ontario Inc.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
