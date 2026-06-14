@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Reviews · 客戶評價 | Lakeshine Cleaning Inc.</title>
+<meta name="description" content="Read verified reviews from our cleaning clients in Markham and the GTA. See why families trust Lakeshine Cleaning Inc.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --brand:     #0070C0;
+    --brand-dk:  #004F8B;
+    --brand-lt:  #D6E8F8;
+    --brand-xl:  #EBF4FC;
+    --dark:      #0D1B2A;
+    --slate:     #37474F;
+    --grey-lt:   #F5F7FA;
+    --white:     #FFFFFF;
+    --shadow:    0 4px 24px rgba(0,80,140,.10);
+    --radius:    12px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,112,192,.10);
+    padding: 0 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+    box-shadow: 0 2px 16px rgba(0,80,140,.07);
+  }
+  .nav-brand {
+    display: flex; align-items: center; gap: 12px; text-decoration: none;
+  }
+  .nav-logo {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dk) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 700; color: white;
+    letter-spacing: -1px;
+  }
+  .nav-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px; font-weight: 600; color: var(--brand-dk);
+    line-height: 1.2;
+  }
+  .nav-name span { display: block; font-size: 10px; font-family: 'DM Sans', sans-serif; font-weight: 400; color: var(--slate); letter-spacing: .5px; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 32px; }
+  .nav-links a { text-decoration: none; color: var(--slate); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--brand); }
+  .nav-links a.active { color: var(--brand); font-weight: 600; }
+  .nav-cta {
+    background: var(--brand); color: white !important;
+    padding: 9px 22px; border-radius: 8px; font-weight: 600 !important;
+    transition: background .2s, transform .1s !important;
+  }
+  .nav-cta:hover { background: var(--brand-dk) !important; transform: translateY(-1px); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--brand-xl) 0%, var(--brand-lt) 100%);
+    padding: 120px 5vw 64px;
+    text-align: center;
+  }
+  .section-label {
+    display: inline-block;
+    background: var(--brand-lt); color: var(--brand-dk);
+    font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; padding: 5px 14px; border-radius: 100px;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700; color: var(--brand-dk);
+    margin-bottom: 16px; line-height: 1.2;
+  }
+  .hero p {
+    font-size: 17px; color: var(--slate);
+    max-width: 520px; margin: 0 auto;
+  }
+
+  /* WIDGET SECTION */
+  .reviews-section {
+    padding: 64px 5vw;
+    background: var(--grey-lt);
+  }
+  .reviews-wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    padding: 8px;
+  }
+  .reviews-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 1000px;
+    border: none;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 64px 5vw;
+    text-align: center;
+    background: var(--brand-dk);
+    color: white;
+  }
+  .cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin-bottom: 12px;
+  }
+  .cta-section p {
+    font-size: 16px; opacity: .8; margin-bottom: 32px;
+  }
+  .btn {
+    display: inline-block;
+    background: white; color: var(--brand-dk);
+    padding: 14px 36px; border-radius: 8px;
+    font-weight: 600; font-size: 16px;
+    text-decoration: none;
+    transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 4px 16px rgba(0,0,0,.15);
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark); color: rgba(255,255,255,.7);
+    padding: 48px 5vw 32px;
+  }
+  .footer-top {
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; gap: 40px; margin-bottom: 40px;
+  }
+  .footer-brand .nav-name { color: white; font-size: 20px; }
+  .footer-brand .nav-name span { color: rgba(255,255,255,.5); }
+  .footer-tagline { font-size: 13px; margin-top: 10px; max-width: 220px; line-height: 1.6; }
+  .footer-col h4 { color: white; font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+  .footer-col a, .footer-col p {
+    display: block; color: rgba(255,255,255,.6);
+    font-size: 13px; text-decoration: none; line-height: 1;
+    margin-bottom: 10px; transition: color .2s;
+  }
+  .footer-col a:hover { color: white; }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding-top: 24px; display: flex;
+    justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    font-size: 12px; color: rgba(255,255,255,.4);
+  }
+  .footer-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+  .badge {
+    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+    padding: 5px 12px; border-radius: 100px; font-size: 11px; color: rgba(255,255,255,.6);
+    display: flex; align-items: center; gap: 5px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand">
+    <div class="nav-logo">L</div>
+    <div class="nav-name">
+      Lakeshine Cleaning
+      <span>湖光清潔有限公司</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="/#services">Services</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#why">Why Us</a>
+    <a href="/#coverage">Coverage</a>
+    <a href="/reviews.html" class="active">Reviews</a>
+    <a href="tel:3653665151" class="nav-phone">📞 365-366-5151</a>
+    <a href="/#booking" class="nav-cta">Book Now</a>
+  </div>
+  <a href="/#booking" class="nav-cta" style="text-decoration:none;font-size:14px;font-weight:600;color:white;background:var(--brand);padding:9px 18px;border-radius:8px;display:none;" id="mobile-cta">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="section-label">Verified Reviews · 真實評價</div>
+  <h1>What Our Clients Say<br><span style="font-size:.75em;color:var(--brand);">客戶真實評價</span></h1>
+  <p>Real feedback from families across Markham and the GTA who trust Lakeshine for their home cleaning.</p>
+</section>
+
+<!-- REVIEWS WIDGET -->
+<section class="reviews-section">
+  <div class="reviews-wrapper">
+    <!--Start of Housecallpro Reviews Widget-->
+    <iframe src="https://client.housecallpro.com/reviews/widget/d7a57ccc-6fa0-46ff-a40c-5de06fb9ee1b" height="1000" width="1000"></iframe>
+    <!--End of Housecallpro Reviews Widget-->
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready for a Spotless Home? · 準備好了嗎？</h2>
+  <p>Join our satisfied clients across Markham and the GTA.</p>
+  <a href="/#booking" class="btn">Book Your Clean Today →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="nav-brand" style="text-decoration:none;">
+        <div class="nav-logo">L</div>
+        <div class="nav-name">Lakeshine Cleaning<span>湖光清潔有限公司</span></div>
+      </div>
+      <p class="footer-tagline">Professional cleaning services for GTA families. Bilingual. Insured. Reliable.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services · 服務</h4>
+      <a href="/#services">Regular Cleaning · 定期清潔</a>
+      <a href="/#services">Move-Out Cleaning · 搬家清潔</a>
+      <a href="/#services">House & Townhouse · 獨立屋</a>
+      <a href="/#services">Add-On Services · 附加服務</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact · 聯繫</h4>
+      <a href="tel:3653665151">📞 365-366-5151</a>
+      <a href="mailto:info@lakeshinecleaning.ca">✉ info@lakeshinecleaning.ca</a>
+      <p>💬 WeChat: lakeshineclean</p>
+      <p>📍 Markham, Ontario</p>
+    </div>
+    <div class="footer-col">
+      <h4>Hours · 服務時間</h4>
+      <p>Monday – Friday · 週一至週五</p>
+      <p>9:00 AM – 7:00 PM</p>
+      <p>Saturday · 週六</p>
+      <p>9:00 AM – 5:00 PM</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Lakeshine Cleaning Inc. (1001637462 Ontario Inc.) All rights reserved.</span>
+    <div class="footer-badges">
+      <span class="badge">🛡 $2M Insured</span>
+      <span class="badge">✓ Bilingual</span>
+      <span class="badge">⭐ Verified Reviews</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
