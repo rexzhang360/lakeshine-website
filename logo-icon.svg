@@ -1,0 +1,44 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#274B7A"/>
+      <stop offset="100%" stop-color="#163A66"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(-6, -3) scale(0.7)">
+    <!-- Back wall -->
+    <rect x="8" y="58" width="112" height="80" fill="#2A5FA8"/>
+
+    <!-- Roof -->
+    <path d="M64 0 L128 56 L120 56 L64 14 L8 56 L0 56 Z" fill="url(#roofGrad)"/>
+    <path d="M64 0 L128 56 L128 64 L64 8 L0 64 L0 56 Z" fill="#0F2C52"/>
+
+    <!-- Front wall -->
+    <rect x="8" y="58" width="112" height="80" fill="#3D75C4"/>
+
+    <!-- Left wall shading strip -->
+    <rect x="8" y="58" width="14" height="80" fill="#2A5FA8"/>
+
+    <!-- Window with frame -->
+    <rect x="80" y="74" width="30" height="30" rx="4" fill="#163A66"/>
+    <rect x="83" y="77" width="24" height="24" rx="2" fill="#FFFFFF"/>
+    <line x1="95" y1="77" x2="95" y2="101" stroke="#163A66" stroke-width="2"/>
+    <line x1="83" y1="89" x2="107" y2="89" stroke="#163A66" stroke-width="2"/>
+
+    <!-- Door -->
+    <rect x="28" y="84" width="38" height="54" rx="2" fill="#163A66"/>
+    <circle cx="58" cy="114" r="2.6" fill="#FFFFFF"/>
+
+    <!-- Ground shadow -->
+    <ellipse cx="64" cy="140" rx="64" ry="6" fill="#163A66" opacity="0.18"/>
+
+    <!-- Sparkles -->
+    <g transform="translate(96, 0)">
+      <path d="M14 0 L17.5 10 L27.5 13.5 L17.5 17 L14 27 L10.5 17 L0.5 13.5 L10.5 10 Z" fill="#FFC93C"/>
+    </g>
+    <g transform="translate(122, 14)" opacity="0.85">
+      <path d="M7 0 L8.8 4.6 L13.4 6.5 L8.8 8.4 L7 13 L5.2 8.4 L0.6 6.5 L5.2 4.6 Z" fill="#FFC93C"/>
+    </g>
+  </g>
+</svg>
